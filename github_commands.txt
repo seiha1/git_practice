@@ -1,0 +1,67 @@
+Create a local clone of your fork
+https://help.github.com/articles/fork-a-repo/
+
+
+Adding an existing project to GitHub using the command line
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+
+How to exit git log or git diff? [duplicate]
+https://stackoverflow.com/questions/9483757/how-to-exit-git-log-or-git-diff
+
+Checking the status
+git_practice$ git status
+
+Adding Files to the Repository
+git_practice$ git add
+git_practice$ git status
+
+Making a Commit
+git_practice$ git commit -m "Started project."
+
+Checking the Log
+git_practice$ git log
+git_practice$ git log --pretty=oneline
+The --pretty=oneline flag provides the two most important pieces of
+information: the reference ID of the commit and the message recorded for the commit.
+
+The Second Commit
+git_practice$ git commit -am "Extended greeting."
+We make a new commit, passing the -am flag when we use the command
+git commit u. The -a flag tells Git to add all modified files in the repository
+to the current commit. (If you create any new files between commits, simply
+reissue the git add . command to include the new files in the repository.)
+The -m flag tells Git to record a message in the log for this commit.
+
+Reverting a Change
+git_practice$ git checkout .
+
+Checking Out Previous Commits
+git_practice$ git log --pretty=oneline
+08d4d5e39cb906f6cff197bd48e9ab32203d7ed6 Extended greeting.
+be017b7f06d390261dbc64ff593be6803fd2e3a1 Started project.
+git_practice$ git checkout be017b
+Note: checking out 'be017b'.
+git_practice$ git checkout master
+This brings you back to the master branch. Unless you want to work with
+some more advanced features of Git, it’s best not to make any changes to your project when you’ve checked out an old commit.
+
+Deleting the Repository
+u git_practice$ git status
+# On branch master
+nothing to commit, working directory clean
+v git_practice$ rm -rf .git
+w git_practice$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+x git_practice$ git init
+Initialized empty Git repository in git_practice/.git/
+Using Git for Version Control     513y git_practice$ git status
+
+
+
+
+
+
+
+
+
+
